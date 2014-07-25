@@ -275,6 +275,24 @@ module.exports = function (grunt) {
         },
         // Put files not handled in other tasks here
         copy: {
+            tmp_dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/scripts',
+                    src: '**/*.js',
+                    dest: '.tmp/scripts',
+                    ext: '.js'
+                }]
+            },
+            tmp_test: {
+                files: [{
+                    expand: true,
+                    cwd: 'test/spec',
+                    src: '{,*/}*.js',
+                    dest: '.tmp/spec',
+                    ext: '.js'
+                }]
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -311,12 +329,15 @@ module.exports = function (grunt) {
                 'markdown',
                 'ember_handlebars',
                 // 'coffee:dist'
+                'copy:tmp_dist'
             ],
             test: [
                 // 'coffee'
+                'copy:tmp_test'
             ],
             dist: [
                 // 'coffee',
+                'copy:tmp_dist',
                 'markdown',
                 'ember_handlebars',
                 'compass',
