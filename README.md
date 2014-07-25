@@ -1,6 +1,7 @@
 # Bootstrap for Ember with no coffeescript
-This project is almost identical except the fact that replace all coffeescript codes with javascript codes.
-I created this project for developers who are not familiar with coffeescript.
+**This project is almost identical except the fact that replace all coffeescript codes with javascript codes.
+I created this project for developers who are not familiar with coffeescript.**
+
 
 _Bootstrap for Ember.js_ is a collection of UI components based on Twitter Bootstrap *v3* for Ember.js
 
@@ -39,6 +40,19 @@ watch it or visit often to see the new stuff, and if you like it, _star_ it :-)*
 
 
 ## Usage
+### Environment Setup
+```
+$ bower install
+$ npm install
+```
+
+### Compile
+```
+$ grunt build for production release
+$ grunt dev for development
+```
+
+
 
 ### Installation
 
